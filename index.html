@@ -36,31 +36,31 @@
 
                         <section class="memory mb-4">
                             <h3>Memory</h3>
-                            <button type="button" class="btn-outline-secondary">
+                            <button id="memory-1" type="button" class="btn-outline-secondary">
                                 8 GB unified Memory
                             </button>
-                            <button type="button" class="btn-outline-secondary">
+                            <button id="memory-2" type="button" class="btn-outline-secondary">
                                 16 GB unified Memory
                             </button>
                         </section>
                         <section class="storage mb-4">
                             <h3>Storage</h3>
-                            <button type="button" class="btn-outline-secondary">
+                            <button id="ssd-1" type="button" class="btn-outline-secondary">
                                 256GB SSD storage
                             </button>
-                            <button type="button" class="btn-outline-secondary">
+                            <button id="ssd-2" type="button" class="btn-outline-secondary">
                                 512GB SSD storage
                             </button>
-                            <button type="button" class="btn-outline-secondary">
+                            <button id="ssd-3" type="button" class="btn-outline-secondary">
                                 1TB SSD storage
                             </button>
                         </section>
                         <section class="delivery mb-4">
                             <h3>Choose your delivery option</h3>
-                            <button type="button" class="btn-outline-secondary">
+                            <button id="no-charge" type="button" class="btn-outline-secondary no-extra">
                                 Friday 25 August , Free prime delivery
                             </button>
-                            <button type="button" class="btn-outline-secondary">
+                            <button id="charge-included" type="button" class="btn-outline-secondary">
                                 21 August, delivery charge $20
                             </button>
                             
@@ -71,18 +71,18 @@
                         <section class="price mt-5 mb-4">
                             <h3>Best price &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $1299</h3>
 
-                            <h3>Extra Memory Cost &nbsp;&nbsp;&nbsp; $<span>0</span></h3>
+                            <h3>Extra Memory Cost &nbsp;&nbsp;&nbsp; $<span id="memory">0</span></h3>
 
-                            <h3>Extra Storage Cost &nbsp;&nbsp;&nbsp;&nbsp $<span>0</span></h3>
+                            <h3>Extra Storage Cost &nbsp;&nbsp;&nbsp;&nbsp $<span id="storage" >0</span></h3>
 
-                            <h3>Delivery Cost &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $<span>0</span></h3>
+                            <h3>Delivery Cost &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $<span id="delivery">0</span></h3>
                             <hr>
-                            <h3>Total Price &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $<span>1299</span></h3>
+                            <h3>Total Price &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $<span id="total">1299</span></h3>
 
                             <!-- promo code  -->
                             <h4 class="mt-4 mb-4">Apply Promo Code</h4>
-                            <input type="text" name="" id=""> 
-                            <button type="button" class="btn btn-danger"> Apply     </button>
+                            <input type="text" name="" id="promo"> 
+                            <button id="apply" type="button" class="btn btn-danger"> Apply     </button>
                         </section>
 
                     </div>
@@ -93,7 +93,7 @@
             <!-- bottom total  -->
             <hr>
             <div class="mb-4">
-                <h1 class="text-center">Total $1229</h1>
+                <h1 class="text-center">Total $<span id="promo-total">1229</span></h1>
             </div>
            
         </section>

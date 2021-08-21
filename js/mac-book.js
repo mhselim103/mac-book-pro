@@ -1,8 +1,11 @@
+// event handler 
+// pricinig
 const bestPrice = document.getElementById('best-price');
 const memoryCost = document.getElementById('memory');
 const storageCost = document.getElementById('storage');
 const deliveryCharge = document.getElementById('delivery');
 
+// buttons
 const memory1 = document.getElementById('memory-1');
 const memory2 = document.getElementById('memory-2');
 const storage1 = document.getElementById('ssd-1');
@@ -11,13 +14,14 @@ const storage3 = document.getElementById('ssd-3');
 const free = document.getElementById('no-charge');
 const shippingCharge = document.getElementById('charge-included');
 
+// total 
 const totalValue = document.getElementById('total');
-
+// promo section 
 const promocode = document.getElementById('promo');
 const applyButton = document.getElementById('apply');
 const promoAmount = document.getElementById('promo-total');
 
-
+// makes value zero 
 function noExtra(id) {
     const zeroExtra = document.getElementById(id)
     zeroExtra.innerText = 0;
@@ -25,6 +29,7 @@ function noExtra(id) {
 
 }
 
+// updating total 
 function updateTotal() {
     const price = Number(bestPrice.innerText) + Number(memoryCost.innerText) + Number(storageCost.innerText) + Number(deliveryCharge.innerText);
     totalValue.innerText = price;
@@ -32,6 +37,7 @@ function updateTotal() {
 } 
 
 
+// event handlers 
 memory1.addEventListener('click', function () {
 
     memoryCost.innerText = noExtra('memory')
@@ -77,7 +83,7 @@ shippingCharge.addEventListener('click', function () {
     updateTotal();
 })
 
-
+// applying promo code 
 
 applyButton.addEventListener('click', function () {
     let promoValue = promocode.value;

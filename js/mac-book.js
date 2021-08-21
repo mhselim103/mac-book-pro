@@ -12,7 +12,8 @@ const free = document.getElementById('no-charge');
 const shippingCharge = document.getElementById('charge-included');
 
 const totalValue = document.getElementById('total');
-const promocode = document.getElementById('promo').value;
+
+const promocode = document.getElementById('promo');
 const applyButton = document.getElementById('apply');
 const promoAmount = document.getElementById('promo-total');
 
@@ -27,16 +28,7 @@ function noExtra(id) {
 function updateTotal() {
     const price = Number(bestPrice.innerText) + Number(memoryCost.innerText) + Number(storageCost.innerText) + Number(deliveryCharge.innerText);
     totalValue.innerText = price;
-    // promoAmount.innerText = price;
-    promoAmount.innerText = price - price * (20 / 100);
-    console.log(promoAmount.innerText);
-/* 
-    if (promocode == 'stevekaku') {
-        applyButton.addEventListener('click', function () {
-            promoAmount.innerText = price - price * (20 / 100);
-        })
-    }
-     */
+    promoAmount.innerText = price;
 } 
 
 
@@ -83,4 +75,18 @@ shippingCharge.addEventListener('click', function () {
     
     deliveryCharge.innerText = 20;
     updateTotal();
+})
+
+
+
+applyButton.addEventListener('click', function () {
+    let promoValue = promocode.value;
+    if (promoValue == 'stevekaku') {
+        promoAmount.innerText = totalValue.innerText - totalValue.innerText * (20 / 100);
+        
+    }
+
+    promocode.value= '';
+    
+    
 })
